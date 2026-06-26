@@ -1,4 +1,5 @@
 import { defineConfig } from "vite";
+import netlifyTanStackStart from "@netlify/vite-plugin-tanstack-start";
 import { tanstackStart } from "@tanstack/react-start/plugin/vite";
 import react from "@vitejs/plugin-react";
 import tailwindcss from "@tailwindcss/vite";
@@ -14,6 +15,7 @@ export default defineConfig({
       // nitro/vite builds from this
       server: { entry: "server" },
     }),
+    netlifyTanStackStart(),
     react(),
   ],
 });
